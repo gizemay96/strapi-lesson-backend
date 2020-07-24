@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/re-tweets",
+      "handler": "re-tweet.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/re-tweets/count",
+      "handler": "re-tweet.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/re-tweets/:id",
+      "handler": "re-tweet.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/re-tweets",
+      "handler": "re-tweet.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/re-tweets/:id",
+      "handler": "re-tweet.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/re-tweets/:id",
+      "handler": "re-tweet.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

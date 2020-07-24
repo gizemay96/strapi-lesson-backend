@@ -1,8 +1,8 @@
 {
   "kind": "collectionType",
-  "collectionName": "comment",
+  "collectionName": "ReTweet",
   "info": {
-    "name": "comment"
+    "name": "ReTweet"
   },
   "options": {
     "increments": true,
@@ -10,18 +10,19 @@
   },
   "attributes": {
     "text": {
-      "type": "text",
-      "required": true,
-      "maxLength": 144
+      "type": "string"
     },
     "user": {
       "plugin": "users-permissions",
-      "model": "user",
-      "via": "comments"
+      "model": "user"
     },
-    "tweet": {
-      "model": "tweet",
-      "via": "comments"
+    "comments": {
+      "collection": "comment",
+      "via": "re_tweet"
+    },
+    "likes": {
+      "collection": "like",
+      "via": "re_tweet"
     },
     "image": {
       "collection": "file",
@@ -33,13 +34,11 @@
       "plugin": "upload",
       "required": false
     },
-    "likes": {
-      "via": "comment",
-      "collection": "like"
+    "rtUserId": {
+      "type": "integer"
     },
-    "re_tweet": {
-      "via": "comments",
-      "model": "re-tweet"
+    "tweet": {
+      "model": "tweet"
     }
   }
 }

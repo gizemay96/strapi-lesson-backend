@@ -17,6 +17,14 @@
       "plugin": "users-permissions",
       "model": "user",
       "via": "likes"
+    },
+    "comment": {
+      "model": "comment",
+      "via": "likes"
+    },
+    "re_tweet": {
+      "via": "likes",
+      "model": "re-tweet"
     }
   }
 }
